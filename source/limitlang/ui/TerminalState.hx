@@ -1,7 +1,6 @@
 package limitlang.ui;
 
 import flixel.input.keyboard.FlxKey;
-import lime.app.Event;
 import flixel.FlxG;
 import flixel.text.FlxText;
 import flixel.FlxState;
