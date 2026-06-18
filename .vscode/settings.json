@@ -1,0 +1,58 @@
+{
+	"search.exclude": {
+		"export/**/*.*": true
+	},
+	"lime.defaultTargetConfiguration": "Windows / Debug",
+	"lime.targets": [
+		{
+			"target": "air",
+			"enabled": false,
+			"label": "AIR"
+		},
+		{
+			"target": "android",
+			"enabled": false,
+			"label": "Android"
+		},
+		{
+			"target": "electron",
+			"enabled": false,
+			"label": "Electron"
+		},
+		{
+			"target": "emscripten",
+			"enabled": false,
+			"label": "Emscripten"
+		},
+		{
+			"target": "flash",
+			"enabled": false,
+			"label": "Flash"
+		},
+		{
+			"target": "html5",
+			"enabled": false,
+			"label": "HTML5"
+		},
+		{
+			"target": "linux",
+			"enabled": true,
+			"label": "Linux"
+		},
+		{
+			"target": "mac",
+			"enabled": true,
+			"label": "MacOS"
+		},
+		{
+			"target": "neko",
+			"enabled": false,
+			"label": "Neko"
+		},
+		{
+			"target": "windows",
+			"enabled": true,
+			"label": "Windows"
+		}
+	]
+}
