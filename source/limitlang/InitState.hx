@@ -1,9 +1,9 @@
 package limitlang;
 
-import limitlang.ui.TerminalState;
+import limitlang.ui.terminal.components.commands.RefreshCommand;
+import limitlang.util.content.ContentManager;
+import limitlang.ui.terminal.TerminalState;
 import flixel.FlxG;
-import limitlang.util.Constants;
-import limitlang.util.FileUtil;
 import flixel.FlxState;
 
 class InitState extends FlxState
@@ -12,7 +12,9 @@ class InitState extends FlxState
 	{
 		super.create();
 
-		FileUtil.createMissingDirectory(Constants.CONTENT_FOLDER);
+		ContentManager.refreshFolderList();
+
+		new RefreshCommand();
 
 		FlxG.switchState(() -> new TerminalState());
 	}
