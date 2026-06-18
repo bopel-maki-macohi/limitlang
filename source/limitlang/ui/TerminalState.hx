@@ -51,8 +51,12 @@ class TerminalState extends FlxState
 	{
 		switch (key)
 		{
-			case END, BREAK, MENU, SHIFT, ENTER, ALT, CONTROL, WINDOWS, SCROLL_LOCK, NUMLOCK, TAB, CAPSLOCK, LEFT, DOWN, UP, RIGHT, DELETE, PRINTSCREEN,
-				PAGEUP, PAGEDOWN, INSERT:
+			case ENTER:
+				onCommand(inputText.text);
+				inputText.text = '';
+
+			case END, BREAK, MENU, SHIFT, ALT, CONTROL, WINDOWS, SCROLL_LOCK, NUMLOCK, TAB, CAPSLOCK, LEFT, DOWN, UP, RIGHT, DELETE, PRINTSCREEN, PAGEUP,
+				PAGEDOWN, INSERT:
 
 			case BACKSPACE:
 				inputText.text = inputText.text.substr(0, inputText.text.length - 1);
@@ -67,5 +71,12 @@ class TerminalState extends FlxState
 					inputText.text += (FlxG.keys.pressed.SHIFT || Constants.FUNCTION_KEYS.contains(key)) ? key.toString()
 						.toUpperCase() : key.toString().toLowerCase();
 		}
+	}
+
+	function onCommand(command:String)
+	{
+		var components:Array<String> = command.split(' ');
+
+		trace(components);
 	}
 }
