@@ -33,8 +33,6 @@ class RefreshCommand extends TerminalCommand
 				returnCode ??= 'Unknown parameter for command "refresh": "${param1 ?? 'null'}"';
 		}
 
-        trace(returnCode);
-
 		return returnCode;
 	}
 }
